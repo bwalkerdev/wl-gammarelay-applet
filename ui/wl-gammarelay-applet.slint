@@ -102,6 +102,7 @@ component LabeledToggleSwitch inherits HorizontalLayout {
         Text {
             text: root.label;
             font-size: 16px;
+            color: #fff;
         }
     }
 
@@ -122,6 +123,7 @@ component LabeledVerticalSlider inherits VerticalLayout {
         Text {
             text: root.label;
             font-size: 13px;
+            color: #fff;
         }
     }
 
@@ -224,10 +226,10 @@ export component WlGammaRelayApplet inherits Window {
 
             opaque-region := VerticalLayout {
                 panel-rect := Rectangle {
-                    border-width: 2px;
-                    border-color: #777;
+                    border-width: 3px;
+                    border-color: #89B4FA;
                     border-radius: 6px;
-                    background: #111;
+                    background: #000;
                     opacity: Parameters.window-opacity;
                 
                     controls := VerticalLayout {
@@ -236,6 +238,7 @@ export component WlGammaRelayApplet inherits Window {
                         if Startup.show_value : value := Rectangle {
                             Text {
                                 text: Parameters.value-text;
+                                color: #fff;
                             }
                         }
 
@@ -277,7 +280,7 @@ export component WlGammaRelayApplet inherits Window {
                     }
                 }
                 if Startup.show_caret : tail := WindowCaret {
-                    fill: #777;
+                    fill: #89B4FA;
                     height: 16px;
                     opacity: Parameters.window-opacity;
                 }
